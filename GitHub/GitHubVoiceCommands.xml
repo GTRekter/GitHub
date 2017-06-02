@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<VoiceCommands xmlns="http://schemas.microsoft.com/voicecommands/1.2">
+
+  <CommandSet xml:lang="en-us" Name="EvolveVoiceCommands_en-us">
+    <AppName> github  </AppName>
+    <Example> General informations </Example>
+
+    <Command Name="generalInformations">
+      <Example> General informations </Example>
+      <ListenFor RequireAppName="BeforeOrAfterPhrase"> [show] general informations </ListenFor>
+      <Feedback> I'm checking, please wait </Feedback>
+      <VoiceCommandService Target="GitHubCommandService"/>
+    </Command>
+
+    <Command Name="checkNotifies">
+      <Example> Do i have any notify on github </Example>
+      <ListenFor RequireAppName="BeforeOrAfterPhrase"> Do i have any notify [on] </ListenFor>
+      <ListenFor RequireAppName="BeforeOrAfterPhrase"> Check [my] notifies [on] </ListenFor>
+      <Feedback> I'm checking, please wait..</Feedback>
+      <VoiceCommandService Target="GitHubCommandService"/>
+    </Command>
+
+    <Command Name="checkRepositories">
+      <Example> Does my repositories have some changes on github </Example>
+      <ListenFor RequireAppName="BeforeOrAfterPhrase"> Does my repositories have some changes [on] </ListenFor>
+      <ListenFor RequireAppName="BeforeOrAfterPhrase"> Check [my] repositories [on] </ListenFor>
+      <Feedback> I'm checking, please wait..</Feedback>
+      <VoiceCommandService Target="GitHubCommandService"/>
+    </Command>
+
+  </CommandSet>
+
+</VoiceCommands>
